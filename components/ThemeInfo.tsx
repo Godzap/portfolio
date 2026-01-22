@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { getImagePath } from '@/utils';
 import styles from '@/styles/ThemeInfo.module.css';
 
 interface ThemeInfoProps {
@@ -19,7 +20,7 @@ const ThemeInfo = ({ icon, name, publisher, theme }: ThemeInfoProps) => {
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <Image
-          src={icon}
+          src={getImagePath(icon)}
           alt={name}
           height={80}
           width={80}

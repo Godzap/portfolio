@@ -3,7 +3,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { VscChevronRight } from 'react-icons/vsc';
 
+import { getImagePath } from '@/utils';
 import styles from '@/styles/Explorer.module.css';
+
 
 const explorerItems = [
   {
@@ -71,7 +73,7 @@ const Explorer = () => {
           {explorerItems.map((item) => (
             <Link href={item.path} key={item.name}>
               <div className={styles.file}>
-                <Image src={item.icon} alt={item.name} height={18} width={18} />{' '}
+                <Image src={getImagePath(item.icon)} alt={item.name} height={18} width={18} />{' '}
                 <p>{item.name}</p>
               </div>
             </Link>
