@@ -2,7 +2,6 @@
 import { VscEye, VscHeart, VscComment } from 'react-icons/vsc';
 
 import { Article } from '@/types';
-import { getImagePath } from '@/utils';
 
 import styles from '@/styles/ArticleCard.module.css';
 
@@ -20,7 +19,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
     >
       <div className={styles.imageWrapper}>
         <img
-          src={getImagePath(article.cover_image)}
+          src={`/portfolio${article.cover_image}`}
           alt={article.title}
           className={styles.image}
         />

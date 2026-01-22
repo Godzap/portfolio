@@ -1,5 +1,4 @@
 import styles from '@/styles/AboutPage.module.css';
-import { getImagePath } from '@/utils';
 
 
 const AboutPage = () => {
@@ -9,7 +8,7 @@ const AboutPage = () => {
         <div className={styles.profileSection}>
           <div className={styles.imageWrapper}>
             <img
-              src={getImagePath('/trabalho.png')}
+              src="/portfolio/trabalho.png"
               alt="Enzo Baião"
               width={200}
               height={200}

@@ -1,6 +1,6 @@
 
 
-import { getImagePath } from '@/utils';
+
 import styles from '@/styles/ThemeInfo.module.css';
 
 interface ThemeInfoProps {
@@ -20,7 +20,7 @@ const ThemeInfo = ({ icon, name, publisher, theme }: ThemeInfoProps) => {
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <img
-          src={getImagePath(icon)}
+          src={`/portfolio${icon}`}
           alt={name}
           height={80}
           width={80}

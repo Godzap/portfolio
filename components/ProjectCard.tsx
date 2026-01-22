@@ -1,6 +1,6 @@
 
 
-import { getImagePath } from '@/utils';
+
 import { Project } from '@/types';
 
 import styles from '@/styles/ProjectCard.module.css';
@@ -21,7 +21,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className={styles.header}>
           <div className={styles.logoWrapper}>
             <img
-              src={getImagePath(project.logo)}
+              src={`/portfolio${project.logo}`}
               alt={`${project.title} logo`}
               width={24}
               height={24}
