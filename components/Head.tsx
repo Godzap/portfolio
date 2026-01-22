@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { getImagePath } from '@/utils';
 
 interface CustomHeadProps {
   title: string;
@@ -21,7 +22,7 @@ const CustomHead = ({ title }: CustomHeadProps) => {
         property="og:description"
         content="Backend and Data Engineer with 5+ years of experience building reliable systems and data pipelines."
       />
-      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:image" content={getImagePath("/og-image.png")} />
       <meta property="og:url" content="https://enzobaiao.dev" />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>

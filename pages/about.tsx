@@ -9,7 +9,7 @@ const AboutPage = () => {
         <div className={styles.profileSection}>
           <div className={styles.imageWrapper}>
             <Image
-              src={getImagePath("/trabalho.png")}
+              src="/trabalho.png"
               alt="Enzo Baião"
               width={200}
               height={200}

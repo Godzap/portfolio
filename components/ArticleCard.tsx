@@ -20,7 +20,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
     >
       <div className={styles.imageWrapper}>
         <Image
-          src={getImagePath(article.cover_image)}
+          src={article.cover_image}
           alt={article.title}
           fill
           sizes="(max-width: 768px) 100vw, 300px"

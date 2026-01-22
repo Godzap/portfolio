@@ -20,7 +20,7 @@ const ThemeInfo = ({ icon, name, publisher, theme }: ThemeInfoProps) => {
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <Image
-          src={getImagePath(icon)}
+          src={icon}
           alt={name}
           height={80}
           width={80}
