@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { VscArrowRight } from 'react-icons/vsc';
 
 import styles from '@/styles/HomePage.module.css';
@@ -8,40 +9,38 @@ export default function HomePage() {
   const [activeLineIndex, setActiveLineIndex] = useState(0);
 
   const codeLines = [
-    { code: 'const HomePage = () => {', type: 'function' },
+    { code: 'const Developer = () => {', type: 'function' },
     {
-      code: '  const [isLoaded, setIsLoaded] = useState(true);',
+      code: '  const [isAvailable, setIsAvailable] = useState(true);',
       type: 'variable',
     },
     { code: '  const developerInfo = {', type: 'variable' },
-    { code: "    name: 'Nitin Ranganath',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
+    { code: "    name: 'Enzo Baião',", type: 'array-item' },
+    { code: "    role: 'Backend Engineer | Data Engineer',", type: 'array-item' },
+    { code: "    location: 'Rio de Janeiro, Brazil',", type: 'array-item' },
+    { code: "    experience: '5+ years',", type: 'array-item' },
+    { code: '  };', type: 'array-end' },
+    { code: '', type: 'blank' },
+    { code: '  const skills = {', type: 'variable' },
+    { code: "    backend: ['Node.js', 'TypeScript', 'Python'],", type: 'array-item' },
+    { code: "    data: ['Pandas', 'ETL', 'Airflow', 'SQL'],", type: 'array-item' },
+    { code: "    cloud: ['AWS Lambda', 'S3', 'API Gateway'],", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
     {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
+      code: '    console.log("Open to new opportunities!");',
       type: 'return',
     },
-    { code: '    setIsLoaded(true);', type: 'function-call' },
+    { code: '    setIsAvailable(true);', type: 'function-call' },
     { code: '  }, []);', type: 'close' },
     { code: '', type: 'blank' },
     { code: '  return (', type: 'return-object' },
-    { code: '    <main className="hero-container">', type: 'object-method' },
-    { code: '      <h1>{developerInfo.name}</h1>', type: 'object-method' },
-    { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
-    { code: '      <div className="cta">', type: 'object-method' },
-    {
-      code: '        <Link href="/projects">View Projects</Link>',
-      type: 'object-method',
-    },
-    { code: '      </div>', type: 'object-method' },
-    { code: '    </main>', type: 'object-method' },
+    { code: '    <Portfolio developerInfo={developerInfo} />', type: 'object-method' },
     { code: '  );', type: 'close' },
     { code: '};', type: 'close-function' },
     { code: '', type: 'blank' },
-    { code: 'export default HomePage;', type: 'function-call' },
+    { code: 'export default Developer;', type: 'function-call' },
   ];
 
   useEffect(() => {
@@ -62,9 +61,8 @@ export default function HomePage() {
                 {codeLines.map((_, index) => (
                   <div
                     key={index}
-                    className={`${styles.lineNumber} ${
-                      index === activeLineIndex ? styles.activeLine : ''
-                    }`}
+                    className={`${styles.lineNumber} ${index === activeLineIndex ? styles.activeLine : ''
+                      }`}
                   >
                     {index + 1}
                   </div>
@@ -75,9 +73,8 @@ export default function HomePage() {
                 {codeLines.map((line, index) => (
                   <div
                     key={index}
-                    className={`${styles.codeLine} ${styles[line.type]} ${
-                      index === activeLineIndex ? styles.highlightedLine : ''
-                    }`}
+                    className={`${styles.codeLine} ${styles[line.type]} ${index === activeLineIndex ? styles.highlightedLine : ''
+                      }`}
                   >
                     {line.code}
                   </div>
@@ -90,15 +87,28 @@ export default function HomePage() {
         </div>
 
         <div className={styles.infoSection}>
+          <div className={styles.profileImageWrapper}>
+            <Image
+              src="/trabalho.png"
+              alt="Enzo Baião"
+              width={120}
+              height={120}
+              className={styles.profileImage}
+              priority
+            />
+          </div>
+
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}>Ranganath</span>
+            Enzo <span className={styles.accentText}>Baião</span>
           </h1>
 
-          <div className={styles.developerRole}>Full Stack Web Developer</div>
+          <div className={styles.developerRole}>Backend Engineer | Data Engineer</div>
 
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+            Backend and Data Engineer with 5+ years of experience designing, developing,
+            and maintaining backend services, APIs, and data pipelines in government,
+            healthcare, and analytics environments. AWS certified, highly driven by
+            curiosity and a genuine passion for building reliable systems.
           </p>
 
           <div className={styles.actionLinks}>

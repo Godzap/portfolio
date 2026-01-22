@@ -1,0 +1,188 @@
+.layout {
+  padding: 2rem;
+  padding-top: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e1e4e8;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #58a6ff, #a371f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pageSubtitle {
+  color: #8b949e;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experienceCard {
+  background: linear-gradient(135deg, rgba(22, 27, 34, 0.9), rgba(30, 35, 42, 0.95));
+  border: 1px solid rgba(48, 54, 61, 0.8);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #58a6ff, #a371f7);
+  border-radius: 4px 0 0 4px;
+}
+
+.experienceCard:hover {
+  border-color: rgba(88, 166, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.company {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e1e4e8;
+  margin: 0;
+}
+
+.domain {
+  font-size: 0.85rem;
+  color: #58a6ff;
+  font-weight: 500;
+}
+
+.roleInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #a371f7;
+  margin: 0;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: #8b949e;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.highlights {
+  margin-bottom: 1.25rem;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlights li {
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.highlights li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #58a6ff;
+  font-size: 0.9rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+.techBadge {
+  background: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.techBadge:hover {
+  background: rgba(88, 166, 255, 0.2);
+  border-color: rgba(88, 166, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    padding: 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .roleInfo {
+    align-items: flex-start;
+  }
+
+  .company {
+    font-size: 1.2rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+}

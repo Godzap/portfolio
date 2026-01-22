@@ -15,6 +15,8 @@ export interface Project {
   logo: string;
   link: string;
   slug: string;
+  technologies?: string[];
+  status?: string;
 }
 
 export interface Repo {

@@ -1,0 +1,289 @@
+.layout {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+.headerContent {
+    flex: 1;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e1e4e8;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #58a6ff, #a371f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pageSubtitle {
+    color: #8b949e;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.headerImage {
+    flex-shrink: 0;
+}
+
+.profileImage {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(88, 166, 255, 0.5);
+    box-shadow: 0 0 40px rgba(88, 166, 255, 0.2);
+}
+
+/* Focus Areas */
+.focusAreas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.areaCard {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(22, 27, 34, 0.9), rgba(30, 35, 42, 0.95));
+    border: 1px solid rgba(48, 54, 61, 0.8);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.areaCard:hover {
+    border-color: rgba(88, 166, 255, 0.4);
+    transform: translateX(5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.areaIcon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(88, 166, 255, 0.1);
+    border-radius: 12px;
+    color: #58a6ff;
+}
+
+.areaContent {
+    flex: 1;
+}
+
+.areaTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e1e4e8;
+    margin: 0 0 0.75rem 0;
+}
+
+.areaDetails {
+    color: #8b949e;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.areaTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: rgba(163, 113, 247, 0.1);
+    color: #a371f7;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(163, 113, 247, 0.2);
+}
+
+/* Mindset Section */
+.mindsetSection {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(163, 113, 247, 0.05));
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+}
+
+.mindsetIcon {
+    flex-shrink: 0;
+    color: #ffc107;
+}
+
+.mindsetContent {
+    flex: 1;
+}
+
+.mindsetTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e1e4e8;
+    margin: 0 0 0.5rem 0;
+}
+
+.mindsetText {
+    color: #c9d1d9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Certifications */
+.certifications {
+    margin-top: 1rem;
+}
+
+.certTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e1e4e8;
+    margin-bottom: 1.25rem;
+}
+
+.certTitle svg {
+    color: #58a6ff;
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.certCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: rgba(22, 27, 34, 0.9);
+    border: 1px solid rgba(48, 54, 61, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.certCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.certBadge {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 2px solid rgba(40, 167, 69, 0.4);
+}
+
+.certCard.inProgress .certBadge {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border-color: rgba(255, 193, 7, 0.4);
+}
+
+.certCard.planned .certBadge {
+    background: rgba(88, 166, 255, 0.1);
+    color: #58a6ff;
+    border-color: rgba(88, 166, 255, 0.3);
+}
+
+.certName {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e1e4e8;
+}
+
+.certStatus {
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+.certCard:first-child .certStatus {
+    color: #28a745;
+}
+
+.certCard.inProgress .certStatus {
+    color: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .certGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        padding: 1.5rem;
+    }
+
+    .pageTitle {
+        font-size: 2rem;
+    }
+
+    .areaCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mindsetSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .profileImage {
+        width: 140px;
+        height: 140px;
+    }
+
+    .areaIcon {
+        width: 60px;
+        height: 60px;
+    }
+}

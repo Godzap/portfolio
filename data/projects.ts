@@ -4,39 +4,69 @@ export interface Project {
   logo: string;
   link: string;
   slug: string;
+  technologies?: string[];
+  status?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: 'Driwwwle',
+    title: 'TCC Generator',
     description:
-      'Discover creative websites and developers. A portal for you to share your projects.',
-    logo: '/logos/driwwwle.svg',
-    link: 'https://github.com/itsnitinr/driwwwle',
-    slug: 'driwwwle',
+      'AI-assisted academic paper generator using prompt engineering and APIs. Features serverless architecture with AWS Lambda and API Gateway.',
+    logo: '/logos/python.svg',
+    link: '#',
+    slug: 'tcc-generator',
+    technologies: ['Python', 'React', 'TypeScript', 'AWS Lambda', 'Supabase', 'S3'],
+    status: 'In Progress',
   },
   {
-    title: 'VSCode Portfolio',
+    title: 'Super Medieval',
     description:
-      'A Visual Studio Code themed developer portfolio built with Next.js and CSS Modules.',
-    logo: '/logos/vsc.svg',
-    link: 'https://github.com/itsnitinr/vscode-portfolio',
-    slug: 'vscode-portfolio',
+      'Community-driven MMORPG focused on roleplay and persistent world systems. Core gameplay and server-side logic in Lua.',
+    logo: '/logos/lua.svg',
+    link: '#',
+    slug: 'super-medieval',
+    technologies: ['Lua', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+    status: 'In Progress',
   },
   {
-    title: 'Subtrackt',
+    title: 'Health Data Integration API',
     description:
-      'A simple and elegant way to track your subscriptions and save money.',
-    logo: '/logos/subtrackt.svg',
-    link: 'https://github.com/itsnitinr/subtrackt',
-    slug: 'subtrackt',
+      'TypeScript API Gateway consolidating fragmented laboratory and hospital data sources at Fiocruz. Includes validation and normalization layers.',
+    logo: '/logos/typescript.svg',
+    link: '#',
+    slug: 'health-data-api',
+    technologies: ['TypeScript', 'Node.js', 'REST APIs', 'MySQL', 'SQL Server'],
+    status: 'Production',
   },
   {
-    title: 'Coolify Deployments',
+    title: 'Laboratory Inventory System',
     description:
-      'VSCode extension to track and deploy your Coolify applications.',
-    logo: '/logos/coolify.svg',
-    link: 'https://github.com/itsnitinr/coolify-vscode-extension',
-    slug: 'coolify-vscode-extension',
+      'Laboratory sample inventory system built with Laravel + MySQL, delivered for adoption in Mozambique\'s public health system.',
+    logo: '/logos/laravel.svg',
+    link: '#',
+    slug: 'lab-inventory',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
+    status: 'Production',
+  },
+  {
+    title: 'Legislative Data Automation',
+    description:
+      'Web scraping bots using Python and Playwright to collect 10k+ legal documents at ALERJ, reducing analysis time by 80%.',
+    logo: '/logos/python.svg',
+    link: '#',
+    slug: 'legislative-automation',
+    technologies: ['Python', 'Playwright', 'Node.js', 'TypeScript', 'SQL'],
+    status: 'Completed',
+  },
+  {
+    title: 'Financial Forecasting Dashboard',
+    description:
+      'Power BI dashboards for financial KPIs and predictive insights at SEFAZ-RJ, using time-series forecasting models.',
+    logo: '/logos/powerbi.svg',
+    link: '#',
+    slug: 'financial-forecast',
+    technologies: ['Python', 'R', 'ARIMA', 'Power BI', 'SQL', 'Pandas'],
+    status: 'Completed',
   },
 ];

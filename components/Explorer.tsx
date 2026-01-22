@@ -17,9 +17,9 @@ const explorerItems = [
     icon: '/logos/html_icon.svg',
   },
   {
-    name: 'contact.css',
-    path: '/contact',
-    icon: '/logos/css_icon.svg',
+    name: 'experience.ts',
+    path: '/experience',
+    icon: '/logos/typescript.svg',
   },
   {
     name: 'projects.js',
@@ -27,8 +27,13 @@ const explorerItems = [
     icon: '/logos/js_icon.svg',
   },
   {
-    name: 'articles.json',
-    path: '/articles',
+    name: 'contact.css',
+    path: '/contact',
+    icon: '/logos/css_icon.svg',
+  },
+  {
+    name: 'studies.json',
+    path: '/studies',
     icon: '/logos/json_icon.svg',
   },
   {
@@ -57,7 +62,7 @@ const Explorer = () => {
             className={styles.chevron}
             style={portfolioOpen ? { transform: 'rotate(90deg)' } : {}}
           />
-          Portfolio
+          Enzo Baião
         </label>
         <div
           className={styles.files}

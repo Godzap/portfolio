@@ -2,14 +2,41 @@
   max-width: 900px;
   height: 100%;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   color: var(--text-color);
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.profileSection {
+  display: flex;
   align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -23,7 +50,6 @@
 .subtitle {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  margin-bottom: 3rem;
 }
 
 .aboutContent {
@@ -31,7 +57,7 @@
 }
 
 .section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .section:last-child {
@@ -46,10 +72,10 @@
 }
 
 .paragraph {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   line-height: 1.7;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .paragraph:last-child {
@@ -61,9 +87,22 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .profileSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profileInfo {
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .container {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .title {
@@ -72,7 +111,11 @@
 
   .subtitle {
     font-size: 1rem;
-    margin-bottom: 2rem;
+  }
+
+  .profileImage {
+    width: 120px;
+    height: 120px;
   }
 
   .sectionTitle {
@@ -81,7 +124,7 @@
   }
 
   .paragraph {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 }

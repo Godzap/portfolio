@@ -16,7 +16,8 @@
   scroll-behavior: smooth;
   overflow-x: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .content {

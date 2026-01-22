@@ -2,39 +2,34 @@ import styles from '@/styles/ContactCode.module.css';
 
 const contactItems = [
   {
-    social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
-  },
-  {
     social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    link: 'enzo.baiao1@hotmail.com',
+    href: 'mailto:enzo.baiao1@hotmail.com',
   },
   {
-    social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    social: 'phone',
+    link: '+55 22 99209-2347',
+    href: 'tel:+5522992092347',
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
+    link: 'enzo-baião',
+    href: 'https://www.linkedin.com/in/enzo-bai%C3%A3o-292944227/',
   },
   {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    social: 'github',
+    link: 'Godzap',
+    href: 'https://github.com/Godzap',
   },
   {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
+    social: 'location',
+    link: 'Rio de Janeiro, Brazil',
+    href: 'https://maps.google.com/?q=Rio+de+Janeiro,+Brazil',
   },
   {
-    social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
+    social: 'availability',
+    link: 'Remote (Brazil) | Europe/Portugal',
+    href: '#',
   },
 ];
 
@@ -42,7 +37,7 @@ const ContactCode = () => {
   return (
     <div className={styles.code}>
       <p className={styles.line}>
-        <span className={styles.className}>.socials</span> &#123;
+        <span className={styles.className}>.contact</span> &#123;
       </p>
       {contactItems.map((item, index) => (
         <p className={styles.line} key={index}>
