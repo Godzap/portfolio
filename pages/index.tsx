@@ -89,13 +89,12 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <div className={styles.profileImageWrapper}>
-            <Image
-              src={getImagePath("/trabalho.png")}
+            <img
+              src="/portfolio/trabalho.png"
               alt="Enzo Baião"
               width={120}
               height={120}
               className={styles.profileImage}
-              priority
             />
           </div>
 
