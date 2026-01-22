@@ -1,5 +1,7 @@
 import ProjectCard from '@/components/ProjectCard';
 
+import Link from 'next/link';
+
 import styles from '@/styles/ProjectsListPage.module.css';
 
 interface Project {
@@ -79,9 +81,9 @@ const WorkProjectsPage = () => {
     return (
         <div className={styles.layout}>
             <div className={styles.header}>
-                <a href="/projects" className={styles.backLink}>
+                <Link href="/projects" className={styles.backLink}>
                     ← Back to Projects
-                </a>
+                </Link>
                 <h1 className={styles.pageTitle}>Work Projects</h1>
                 <p className={styles.pageSubtitle}>
                     Data Engineering & Backend / LLM Engineering — Projects developed in
