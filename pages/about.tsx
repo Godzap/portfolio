@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '@/styles/AboutPage.module.css';
-import { getImagePath } from '@/utils';
+
 
 const AboutPage = () => {
   return (

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { VscArrowRight } from 'react-icons/vsc';
 
-import { getImagePath } from '@/utils';
 import styles from '@/styles/HomePage.module.css';
 
 export default function HomePage() {

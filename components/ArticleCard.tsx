@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { VscEye, VscHeart, VscComment } from 'react-icons/vsc';
 
 import { Article } from '@/types';
-import { getImagePath } from '@/utils';
 
 import styles from '@/styles/ArticleCard.module.css';
 

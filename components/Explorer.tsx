@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { VscChevronRight } from 'react-icons/vsc';
 
-import { getImagePath } from '@/utils';
 import styles from '@/styles/Explorer.module.css';
 
 

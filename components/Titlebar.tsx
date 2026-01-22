@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { getImagePath } from '@/utils';
 import styles from '@/styles/Titlebar.module.css';
 
 const Titlebar = () => {
