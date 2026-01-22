@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { VscArrowRight } from 'react-icons/vsc';
 
 import styles from '@/styles/HomePage.module.css';
@@ -88,13 +87,12 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <div className={styles.profileImageWrapper}>
-            <Image
-              src="/trabalho.png"
+            <img
+              src="/portfolio/trabalho.png"
               alt="Enzo Baião"
               width={120}
               height={120}
               className={styles.profileImage}
-              priority
             />
           </div>
 

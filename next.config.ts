@@ -1,12 +1,12 @@
 import type { NextConfig } from 'next';
 
-const repo = 'portfolio';
-
 const nextConfig: NextConfig = {
   output: 'export',
-  trailingSlash: true,
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/portfolio',
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
