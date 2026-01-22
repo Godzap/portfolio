@@ -17,7 +17,7 @@ const projectSections: ProjectSection[] = [
     id: 'work',
     title: 'Work Projects',
     subtitle: 'Data Engineering & Backend / LLM Engineering',
-    image: '/trabalho.png',
+    image: '/portfolio/trabalho.png',
     description:
       'This section includes projects developed in professional environments, focused on data engineering, backend services, and applied AI. The work presented here involves building and maintaining data pipelines, extracting and transforming data from APIs and databases, designing and consuming REST APIs, and implementing backend logic for scalable systems. It also covers applied LLM projects, such as fine-tuning and evaluating language models for real-world use cases, particularly in healthcare and government contexts.',
     link: '/projects/work',
@@ -26,7 +26,7 @@ const projectSections: ProjectSection[] = [
     id: 'personal',
     title: 'Personal Projects',
     subtitle: 'Passion-driven development',
-    image: '/pessoal.png',
+    image: '/portfolio/pessoal.png',
     description:
       'As someone who has lived and breathed computers for as long as I can remember, my personal projects are driven purely by passion for technology. This is where I explore ideas freely, experiment with new tools, deepen my understanding of systems, and continuously challenge myself not because it is required, but because I genuinely enjoy building and learning.',
     link: '/projects/personal',

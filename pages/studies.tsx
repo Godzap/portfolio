@@ -16,15 +16,6 @@ const StudiesPage = () => {
                         scalable systems.
                     </p>
                 </div>
-                <div className={styles.headerImage}>
-                    <Image
-                        src="/pessoal.png"
-                        alt="Enzo Baião studying"
-                        width={200}
-                        height={200}
-                        className={styles.profileImage}
-                    />
-                </div>
             </div>
 
             <div className={styles.focusAreas}>
