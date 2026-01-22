@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   assetPrefix: '/portfolio',
   env: {
     NEXT_PUBLIC_BASE_PATH: '/portfolio',
+    NEXT_PUBLIC_GITHUB_USERNAME: 'Godzap',
   },
   images: {
     unoptimized: true,

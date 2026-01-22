@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import { VscBook, VscCloud, VscMortarBoard, VscLightbulb } from 'react-icons/vsc';
 
 import styles from '@/styles/StudiesPage.module.css';

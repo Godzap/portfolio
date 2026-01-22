@@ -1,18 +1,56 @@
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
-import { VscRepo, VscPerson } from 'react-icons/vsc';
+import { VscRepo, VscPerson, VscLoading } from 'react-icons/vsc';
+import { useState, useEffect } from 'react';
 
 import RepoCard from '@/components/RepoCard';
 import { Repo, User } from '@/types';
 
 import styles from '@/styles/GithubPage.module.css';
 
-interface GithubPageProps {
-  repos: Repo[];
-  user: User;
-}
+const GithubPage = () => {
+  const [user, setUser] = useState<User | null>(null);
+  const [repos, setRepos] = useState<Repo[]>([]);
+  const [loading, setLoading] = useState(true);
 
-const GithubPage = ({ repos, user }: GithubPageProps) => {
+  useEffect(() => {
+    const fetchGitHubData = async () => {
+      try {
+        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'Godzap';
+
+        const userRes = await fetch(`https://api.github.com/users/${username}`);
+        const userData = await userRes.json();
+
+        const repoRes = await fetch(
+          `https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`
+        );
+        const repoData = await repoRes.json();
+
+        setUser(userData);
+        setRepos(Array.isArray(repoData) ? repoData : []);
+      } catch (error) {
+        console.error("Failed to fetch GitHub data", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchGitHubData();
+  }, []);
+
+  if (loading || !user) {
+    return (
+      <div className={styles.layout}>
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
+          <VscLoading className={styles.spinner} size={50} style={{ animation: 'spin 1s linear infinite' }} />
+          <style jsx global>{`
+                @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+             `}</style>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.layout}>
       <div className={styles.pageHeading}>
@@ -34,6 +72,7 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
               width={100}
               height={100}
               priority
+              unoptimized
             />
             <div className={styles.userInfo}>
               <h2 className={styles.username}>{user.login}</h2>
@@ -61,7 +100,7 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
         </div>
         <div className={styles.contributions}>
           <GitHubCalendar
-            username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+            username={user.login}
             hideColorLegend
             hideMonthLabels
             colorScheme="dark"
@@ -80,20 +119,9 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
 };
 
 export async function getStaticProps() {
-  const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
-
-  const userRes = await fetch(`https://api.github.com/users/${username}`);
-  const user = await userRes.json();
-
-  const repoRes = await fetch(
-    `https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`
-  );
-  const repos = await repoRes.json();
-
   return {
-    props: { title: "GitHub", repos, user }
+    props: { title: "GitHub" }
   };
 }
-
 
 export default GithubPage;
