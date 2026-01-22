@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 
 import { getImagePath } from '@/utils';
 import styles from '@/styles/Titlebar.module.css';
@@ -6,8 +6,8 @@ import styles from '@/styles/Titlebar.module.css';
 const Titlebar = () => {
   return (
     <section className={styles.titlebar}>
-      <Image
-        src={getImagePath("/logos/vscode_icon.svg")}
+      <img
+        src={getImagePath('/logos/vscode_icon.svg')}
         alt="VSCode Icon"
         height={15}
         width={15}

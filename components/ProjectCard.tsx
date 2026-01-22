@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 
 import { getImagePath } from '@/utils';
 import { Project } from '@/types';
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.logoWrapper}>
-            <Image
+            <img
               src={getImagePath(project.logo)}
               alt={`${project.title} logo`}
               width={24}

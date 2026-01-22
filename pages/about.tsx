@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from '@/styles/AboutPage.module.css';
 import { getImagePath } from '@/utils';
 
@@ -9,13 +8,12 @@ const AboutPage = () => {
       <div className={styles.content}>
         <div className={styles.profileSection}>
           <div className={styles.imageWrapper}>
-            <Image
-              src={getImagePath("/trabalho.png")}
+            <img
+              src={getImagePath('/trabalho.png')}
               alt="Enzo Baião"
               width={200}
               height={200}
               className={styles.profileImage}
-              priority
             />
           </div>
           <div className={styles.profileInfo}>

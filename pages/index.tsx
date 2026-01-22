@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VscArrowRight } from 'react-icons/vsc';
 
+import { getImagePath } from '@/utils';
 import styles from '@/styles/HomePage.module.css';
 
 export default function HomePage() {
@@ -88,7 +89,7 @@ export default function HomePage() {
         <div className={styles.infoSection}>
           <div className={styles.profileImageWrapper}>
             <img
-              src="/portfolio/trabalho.png"
+              src={getImagePath('/trabalho.png')}
               alt="Enzo Baião"
               width={120}
               height={120}

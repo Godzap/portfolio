@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { useRouter } from 'next/router';
 
 import { getImagePath } from '@/utils';
@@ -19,7 +19,7 @@ const Tab = ({ icon, filename, path }: TabProps) => {
       <div
         className={`${styles.tab} ${router.pathname === path && styles.active}`}
       >
-        <Image src={getImagePath(icon)} alt={filename} height={18} width={18} />
+        <img src={getImagePath(icon)} alt={filename} height={18} width={18} />
         <p>{filename}</p>
       </div>
     </Link>

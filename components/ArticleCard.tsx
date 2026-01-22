@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import { VscEye, VscHeart, VscComment } from 'react-icons/vsc';
 
 import { Article } from '@/types';
@@ -19,11 +19,9 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
       className={styles.container}
     >
       <div className={styles.imageWrapper}>
-        <Image
+        <img
           src={getImagePath(article.cover_image)}
           alt={article.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 300px"
           className={styles.image}
         />
         <div className={styles.viewsBadge}>
